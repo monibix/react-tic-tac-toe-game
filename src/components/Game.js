@@ -14,6 +14,7 @@ const Game = () => {
     const [winner, setWinner] = useState(false)
 
     const handleClick = (i) => {
+        if(paintPlayer[i]) return
         if (player === 'X') setX(x+1)
         if (player === 'O') setO(O+1)
         setPlayer(player === 'X' ? 'O' : 'X')
